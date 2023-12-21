@@ -33,7 +33,11 @@ export default function TableTop() {
   const imageRefFt = useRef<IImageRef>(null);
   const imageRefRiv = useRef<IImageRef>(null);
   const imageRefAmb = useRef<IImageRef>(null);
-  // const [isRotating, setIsRotating] = useState(false);
+  const [isRotating, setIsRotating] = useState(false);
+
+  useEffect(() => {
+    console.log("test");
+  }, []);
 
   useEffect(() => {
     if (isSelectedFt) {
