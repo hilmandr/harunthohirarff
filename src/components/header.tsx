@@ -2,7 +2,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { NAV_LIST } from "./nav";
+import { NAV_LIST } from "../data/nav";
 import { cn } from "@/lib/utils";
 import { usePathname } from "next/navigation";
 
@@ -12,7 +12,7 @@ export default function Header() {
   return (
     <>
       <div className=" flex mx-auto justify-center text-white font-['Helvetica'] z-50">
-        <div className=" flex lg:w-[1000px] w-full h-24 bg-black items-center justify-between px-7 lg:mt-10 mt-0 lg:rounded-3xl rounded-none shadow-2xl shadow-gray-950">
+        <div className=" flex xl:w-[1000px] lg:w-[1000px] w-full h-24 bg-black items-center justify-between px-7 lg:mt-10 mt-0 lg:rounded-3xl rounded-none shadow-2xl shadow-gray-950">
           {/* <div className=" flex items-center"> */}
           <Link href="/" className=" flex items-center">
             <Image
