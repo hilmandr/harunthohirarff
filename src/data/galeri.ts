@@ -1,18 +1,44 @@
-interface Galeri {
-  label: string;
+interface galeri {
+  image: string;
   link: string;
+  title: string;
+  date: string;
 }
-export const NAV_LIST: Galeri[] = [
+export const GALERI_LIST: galeri[] = [
   {
-    label: "BERANDA",
+    image: "/sosialisasi.png",
     link: "/",
+    title: "Sosialisasi APAR",
+    date: "12/12/2023",
   },
   {
-    label: "TENTANG",
-    link: "/tentang",
+    image: "/sosialisasi.png",
+    link: "/",
+    title: "Sosialisasi APAR",
+    date: "12/12/2023",
   },
   {
-    label: "GALERI",
-    link: "/galeri",
+    image: "/sosialisasi.png",
+    link: "/",
+    title: "Sosialisasi APAR",
+    date: "12/12/2023",
+  },
+  {
+    image: "/sosialisasi.png",
+    link: "/",
+    title: "Sosialisasi APAR",
+    date: "12/12/2023",
+  },
+  {
+    image: "/sosialisasi.png",
+    link: "/",
+    title: "Sosialisasi APAR",
+    date: "12/12/2023",
+  },
+  {
+    image: "/sosialisasi.png",
+    link: "/",
+    title: "Sosialisasi APAR",
+    date: "12/12/2023",
   },
 ];
