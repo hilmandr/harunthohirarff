@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "@/components/header";
 
-export default function Tentang() {
+export default function AnggotaKomite() {
   return (
     <>
       <Header />
@@ -13,6 +13,47 @@ export default function Tentang() {
           <div className=" bg-transparent outline-stone-800 outline col-start-2 col-span-4 text-center">
             <p>PEMBINA</p>
             <p>Kepala Kantor Otoritas Bandar Udara Wilayah III</p>
+          </div>
+          <div className=" bg-transparent outline-stone-800 outline col-start-2 col-span-4 text-center">
+            <p>KETUA</p>
+            <p>Kepala Kantor Bandar Udara Harun Thohir - Gresik</p>
+          </div>
+          <div className=" bg-transparent outline-stone-800 outline col-start-2 col-span-4 text-center">
+            <p>WAKIL KETUA</p>
+            <p>TRI WAHYUDIANTO, S.Sos.</p>
+            <p>Ketua Tim TOKPD</p>
+          </div>
+          <div className="col-start-1 col-end-3 bg-transparent outline-stone-800 outline text-center">
+            <p>ANGGOTA</p>
+            <p>Komando Rayon Militer</p>
+          </div>
+          <div className="col-end-7 col-span-2  bg-transparent outline-stone-800 outline text-center">
+            <p>ANGGOTA</p>
+            <p>Kantor BASARNA Sidoarjo</p>
+          </div>
+          <div className="col-start-1 col-end-3 bg-transparent outline-stone-800 outline text-center">
+            <p>ANGGOTA</p>
+            <p>Komando Rayon Militer</p>
+          </div>
+          <div className="col-end-7 col-span-2  bg-transparent outline-stone-800 outline text-center">
+            <p>ANGGOTA</p>
+            <p>Kantor BASARNA Sidoarjo</p>
+          </div>
+          <div className="col-start-1 col-end-3 bg-transparent outline-stone-800 outline text-center">
+            <p>ANGGOTA</p>
+            <p>Komando Rayon Militer</p>
+          </div>
+          <div className="col-end-7 col-span-2  bg-transparent outline-stone-800 outline text-center">
+            <p>ANGGOTA</p>
+            <p>Kantor BASARNA Sidoarjo</p>
+          </div>
+          <div className="col-start-1 col-end-3 bg-transparent outline-stone-800 outline text-center">
+            <p>ANGGOTA</p>
+            <p>Komando Rayon Militer</p>
+          </div>
+          <div className="col-end-7 col-span-2  bg-transparent outline-stone-800 outline text-center">
+            <p>ANGGOTA</p>
+            <p>Kantor BASARNA Sidoarjo</p>
           </div>
           <div className="col-start-1 col-end-3 bg-transparent outline-stone-800 outline text-center">
             <p>ANGGOTA</p>
