@@ -29,15 +29,17 @@ export default function Header() {
           {/* </div> */}
           <ul className=" flex p-6 gap-10 text-white text-lg">
             {NAV_LIST.map((Navigasi, i) => (
-              <Link
-                href={Navigasi.link}
-                className={cn("hover:text-orange-600 duration-300", {
-                  " text-orange-600":
-                    pathname.split("/")[1] == Navigasi.link.split("/")[1],
-                })}
-              >
-                <li>{Navigasi.label}</li>
-              </Link>
+              <div className="" key={i}>
+                <Link
+                  href={Navigasi.link}
+                  className={cn("hover:text-orange-600 duration-300", {
+                    " text-orange-600":
+                      pathname.split("/")[1] == Navigasi.link.split("/")[1],
+                  })}
+                >
+                  <li>{Navigasi.label}</li>
+                </Link>
+              </div>
             ))}
           </ul>
         </div>
