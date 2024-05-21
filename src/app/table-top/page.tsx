@@ -1,9 +1,11 @@
+/* eslint-disable jsx-a11y/alt-text */
 "use client";
+import dynamic from "next/dynamic";
 import Link from "next/link";
-import React, { Component } from "react";
-import { Stage, Layer, Image, Rect, Transformer } from "react-konva";
+import React from "react";
+import { Stage, Layer, Image, Transformer } from "react-konva";
 import useImage from "use-image";
-import { useState, useRef, LegacyRef, useEffect } from "react";
+import { useState, useRef, useEffect } from "react";
 import { cn } from "@/lib/utils";
 import { IoWaterOutline } from "react-icons/io5";
 import { TbFlipVertical } from "react-icons/tb";
@@ -12,6 +14,11 @@ import { Transformer as ITransformerRef } from "konva/lib/shapes/Transformer";
 import { FaFire } from "react-icons/fa";
 import Runway from "@/components/runway";
 import { FaHome } from "react-icons/fa";
+
+const TableTopKonvas = dynamic(() => import("@/components/table-top-konva"), {
+  ssr: false,
+});
+// import TableTopKonva from "@/components/table-top-konva";
 
 export default function TableTop() {
   const [ft] = useImage("/FT.png");
@@ -35,7 +42,6 @@ export default function TableTop() {
   const imageRefFt = useRef<IImageRef>(null);
   const imageRefRiv = useRef<IImageRef>(null);
   const imageRefAmb = useRef<IImageRef>(null);
-  const [isRotating, setIsRotating] = useState(false);
 
   useEffect(() => {
     console.log("test");
@@ -101,64 +107,7 @@ export default function TableTop() {
               </button>
             </div>
           )}
-          <Stage width={window.innerWidth} height={window.innerHeight}>
-            <Layer>
-              <Image
-                image={isGoesOut ? (isDraggingSusi ? susiIsFire : susi) : susi}
-                unoptimized
-                x={isScaleX ? (isScaleX ? 200 : 1250) : 1250}
-                // x={1250}
-                y={10}
-                scaleX={isScaleX ? (isScaleX ? -1 : 1) : 1}
-                draggable={isGoesOut}
-                width={200}
-                height={160}
-                onClick={() => {
-                  setIsGoesOut(!isGoesOut);
-                }}
-              />
-              <Image
-                image={isSpraying ? (isSpraying ? ftIsSpray : ft) : ft}
-                x={617}
-                y={405}
-                draggable={isDraggingFt}
-                width={25}
-                height={140}
-                ref={imageRefFt}
-                onClick={() => {
-                  setIsDraggingFt(!isDraggingFt);
-                  setIsSelectedFt(!isSelectedFt);
-                }}
-              />
-              {isSelectedFt && <Transformer ref={transformerRefFt} />}
-              <Image
-                image={riv}
-                x={695}
-                y={470}
-                draggable
-                width={25}
-                height={70}
-                ref={imageRefRiv}
-                onClick={() => {
-                  setIsSelectedRiv(!isSelectedRiv);
-                }}
-              />
-              {isSelectedRiv && <Transformer ref={transformerRefRiv} />}
-              <Image
-                image={ambulance}
-                x={730}
-                y={470}
-                draggable
-                width={25}
-                height={70}
-                ref={imageRefAmb}
-                onClick={() => {
-                  setIsSelectedAmb(!isSelectedAmb);
-                }}
-              />
-              {isSelectedAmb && <Transformer ref={transformerRefAmb} />}
-            </Layer>
-          </Stage>
+          <TableTopKonvas />
           <Link href="/" className="">
             <FaHome
               fill="white"
