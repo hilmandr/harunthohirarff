@@ -34,7 +34,7 @@ export default function Regulasi() {
                         Status
                       </th>
                       <th scope="col" className="px-6 py-4">
-                        Lihat/Unduh
+                        Lihat
                       </th>
                     </tr>
                   </thead>
@@ -55,11 +55,15 @@ export default function Regulasi() {
                         </td>
                         <td className="whitespace-nowrap px-6 py-4 flex gap-x-2">
                           <button className=" flex w-10 h-7 bg-blue-400 rounded-full items-center justify-center hover:bg-blue-300 duration-150">
-                            <regulasi.tombolLihat size={22} />
+                            <regulasi.tombolLihat size={22} stroke="white" />
                           </button>
-                          <button className=" flex w-10 h-7 bg-green-400 rounded-full items-center justify-center hover:bg-green-300 duration-150">
-                            <regulasi.tombolUnduh size={22} />
-                          </button>
+                          {/* <Link
+                            href="/11. Latihan November.pdf"
+                            rel="noopener noreferrer"
+                            target="_blank"
+                          >
+                            Buka
+                          </Link> */}
                         </td>
                       </tr>
                     ))}

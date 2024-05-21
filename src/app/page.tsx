@@ -35,7 +35,7 @@ export default function Home() {
         <h1 className=" font-semibold text-5xl">
           Apa itu <span className=" text-orange-600"> PKP-PK?</span>
         </h1>
-        <div className=" flex lg:flex-row flex-col lg:col-span-2 grid lg:grid-cols-2 grid-cols-1 mt-10 text-justify">
+        <div className=" lg:flex-row flex-col lg:col-span-2 grid lg:grid-cols-2 grid-cols-1 mt-10 text-justify">
           <div className=" flex flex-col w-full justify-center items-center">
             <Image src="/PKP.png" alt="" width={300} height={300} />
           </div>
@@ -67,7 +67,7 @@ export default function Home() {
           <h1 className=" font-semibold text-5xl text-center">
             Fitur<span className=" text-orange-600">.</span>{" "}
           </h1>
-          <div className=" flex col-span-5 grid lg:grid-cols-5 md:grid-cols-2 grid-cols-1 mt-10 items-center gap-10 justify-between">
+          <div className=" col-span-5 grid lg:grid-cols-5 md:grid-cols-2 grid-cols-1 mt-10 items-center gap-10 justify-between">
             {FITUR_LIST.map((fitur, i) => (
               <Link href={fitur.link} key={i}>
                 <div className=" group hover:border-orange-600 duration-300  flex flex-col w-full h-[530px] pt-8  rounded-3xl shadow-xl shadow-gray-300 px-8 gap-y-4">
@@ -100,7 +100,7 @@ export default function Home() {
             Lihat Semua
           </Link>
         </div>
-        <div className=" flex flex-col grid lg:grid-cols-3 grid-cols-1 md:grid-cols-2 gap-y-5 gap-x-8">
+        <div className=" flex-col grid lg:grid-cols-3 grid-cols-1 md:grid-cols-2 gap-y-5 gap-x-8">
           <Link href="/" className=" flex flex-col ">
             <div className="flex w-full h-[200px] relative overflow-hidden rounded-xl group">
               <Image
